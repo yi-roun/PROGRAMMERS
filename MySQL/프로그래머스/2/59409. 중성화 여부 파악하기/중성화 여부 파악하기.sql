@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT ANIMAL_ID,
+    NAME,
+    CASE
+        WHEN LOWER(SEX_UPON_INTAKE) LIKE 'neutered%' THEN 'O'
+        WHEN LOWER(SEX_UPON_INTAKE) LIKE 'spayed%' THEN 'O'
+        ELSE 'X'
+    END AS NEUTER
+FROM ANIMAL_INS
